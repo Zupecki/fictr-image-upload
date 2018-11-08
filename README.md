@@ -6,6 +6,7 @@ Single Page Application Image Upload Challenge
 ## Installation
 
 <!-- Explain installation instructions here -->
+Requires node.js to be installed
 
 ## Running
 
