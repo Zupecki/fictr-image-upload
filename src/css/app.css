@@ -1,0 +1,72 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    /*display: grid;*/
+    height: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.off {
+    display: none;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #262626;
+    padding: 10px;
+}
+
+.brand-text {
+    color: white;
+    font-family: arial, helvetica, sans-serif;
+}
+
+.upload-container {
+    border-color: #63D6D5;
+    border-style: dashed;
+    width: 50%;
+    height: 30%;
+    padding: 60px;
+    text-align: center;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #D66364;
+    text-align: center;
+    position: relative;
+}
+
+.site-name {
+    display: inline-block;
+    margin: 10px;
+}
+
+.site-name p {
+    margin: 0;
+}
+
+#fictr {
+    font-size: 3em;
+}
+
+#slogan {
+    font-size: 1em;
+    font-style: italic;
+    float: right;
+}
+
+#waiting-state {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+}
