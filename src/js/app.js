@@ -1,4 +1,5 @@
 // code here
+import '../html/index.html';
 import '../css/app.css';
 import { consolePrint, sumNums } from './helpers';
 

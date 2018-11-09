@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'app.bundle.js',
-        publicPath: '/dist'
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -19,11 +19,13 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                use: [
-                    { loader: 'style-loader' },
-                    { loader: 'css-loader' }
-                ]
+                test: /\.(html|css)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]'
+                    }
+                }
             }
         ]
     }
