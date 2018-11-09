@@ -1,9 +1,6 @@
 // code here
 import '../html/index.html';
 import '../css/app.css';
-import { consolePrint, sumNums } from './helpers';
+import { postRequest } from './helpers';
 
-consolePrint('HELLO,');
-consolePrint('WORLD');
-
-consolePrint(sumNums(10,12));
+postRequest('/upload', { message: 'MESSAGE'});

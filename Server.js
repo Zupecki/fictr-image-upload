@@ -3,8 +3,11 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-//app.get('/', (req, res) => res.send('Hello World!'))
-//app.get('/ddsfa', (req, res) => res.send('ddsfa endpoint!'))
+app.use(express.json())
 app.use('/', express.static('dist'))
+app.post('/upload', (req, res) => {
+    console.log(req.body);
+    res.send();
+})
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
