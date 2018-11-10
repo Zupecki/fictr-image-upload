@@ -20,11 +20,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     height: 100%;
     background-color: #262626;
     padding: 10px;
-    align-content: flex-start;
 }
 
 .brand-text {
@@ -32,11 +30,21 @@ body {
     font-family: arial, helvetica, sans-serif;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex: 0 0 80%;
+    height: 30%;
+}
+
 .upload-container {
     border-color: #63D6D5;
     border-style: dashed;
-    height: 30%;
     padding: 60px;
+    height: 100%;
     text-align: center;
     flex: 0 0 50%;
 }

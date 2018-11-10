@@ -19,33 +19,35 @@
     </div>
 
     <div class="content">
-        <div class="upload-container">
+        <div class="flex-container">
+            <div class="upload-container">
 
-            <div id="waiting-state" class="on">
-                <p class="brand-text">drag and drop</p>
-                <input type="file" accept="image/*" name="image-upload" id="image-uploader" class="uploadfile off">
-                <label for="image-uploader"><p class="brand-text bold">or click me</p></label>
-                <p class="brand-text">y'know, whatever works</p>
+                <div id="waiting-state" class="on">
+                    <p class="brand-text">drag and drop</p>
+                    <input type="file" accept="image/*" name="image-upload" id="image-uploader" class="uploadfile off">
+                    <label for="image-uploader"><p class="brand-text bold">or click me</p></label>
+                    <p class="brand-text">y'know, whatever works</p>
+                </div>
+
+                <div id="drag-state" class="off">
+                    <p class="brand-text">drop your image, dare you</p>
+                </div>
+
+                <div id="upload-state" class="off">
+                    <p class="brand-text"><span id="image-name">image name</span> to upload</p>
+                    <img src="">
+                    <textarea rows="3" cols="30">image description (optional)</textarea>
+                </div>
+
             </div>
 
-            <div id="drag-state" class="off">
-                <p class="brand-text">drop your image, dare you</p>
-            </div>
-
-            <div id="upload-state" class="off">
-                <p class="brand-text"><span id="image-name">image name</span>uploading</p>
-                <img>
+            <div id="upload-wrapper">
+                <button if="upload-button" onclick="onClickUpload()">Upload</button>
+                <div id="progress-wrapper">
+                    <progress id="upload-progress" name="upload-progress" max="100" value=""></progress>
+                </div>
             </div>
         </div>
-
-        <div id="upload-wrapper">
-            <button if="upload-button" onclick="onClickUpload()">Upload</button>
-            <div id="progress-wrapper">
-                <progress id="upload-progress" name="upload-progress" max="100" value=""></progress>
-            </div>
-            
-        </div>
-        
     </div>
 
     <!-- Put your js files here -->

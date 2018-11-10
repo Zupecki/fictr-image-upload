@@ -22,8 +22,6 @@ export const uploadImage = (path, file, onprogress) => {
     xhr.send(formData);
 }
 
-/*
-export const updateUploadState = (name) => {
-
+export const updateUploadState = (element) => {
+    //code here
 }
-*/

@@ -9,7 +9,11 @@ const UPLOAD_URL = '/upload'; //self/upload endpoint
 
 window.onClickUpload = () => {
     const file = document.getElementById('image-uploader').files[0];
+
+    // ADDED
     var progress = document.getElementById('upload-progress');
+    const waiting = document.getElementById('waiting-state');
+    const uploading = document.getElementById('upload-state');
 
     //call uploadImage and hand in function callback for onprogress
     uploadImage(UPLOAD_URL, file, (e) => {
@@ -18,4 +22,11 @@ window.onClickUpload = () => {
         console.log(progress);
         console.log(`${e.loaded} / ${e.total}`);
     });
+
+    // ADDED; will clean up
+    waiting.classList.add('off');
+    waiting.classList.remove('on');
+    uploading.classList.remove('off');
+    uploading.classList.add('on');
+    uploading.childNodes[1].childNodes[0].innerHTML = file.name;
 };
