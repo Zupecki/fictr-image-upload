@@ -20,9 +20,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     height: 100%;
     background-color: #262626;
     padding: 10px;
+    align-content: flex-start;
 }
 
 .brand-text {
@@ -33,10 +35,10 @@ body {
 .upload-container {
     border-color: #63D6D5;
     border-style: dashed;
-    width: 50%;
     height: 30%;
     padding: 60px;
     text-align: center;
+    flex: 0 0 50%;
 }
 
 .navbar {
@@ -69,4 +71,31 @@ body {
     display: inline-block;
     text-align: center;
     margin: auto;
+}
+
+#upload-wrapper {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-content: flex-start;
+    flex-direction: row;
+}
+
+#upload-button {
+    margin: 4px;
+    flex-direction: row;
+}
+
+#progress-wrapper {
+    flex: 0 0 100%;
+    text-align: center;
+    margin: 4px;
+    flex-direction: row;
+}
+
+#upload-progress {
+    margin: 4px;
 }

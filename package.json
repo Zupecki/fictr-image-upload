@@ -1,22 +1,23 @@
 {
-	"name": "image-upload",
-	"version": "0.0.0",
-	"dependencies": {
-		"express": "^4.16.4"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.1.5",
-		"@babel/preset-env": "^7.1.5",
-		"babel-loader": "^8.0.4",
-		"css-loader": "^1.0.1",
-		"file-loader": "^2.0.0",
-		"style-loader": "^0.23.1",
-		"webpack": "^4.25.1",
-		"webpack-cli": "^3.1.2",
-		"webpack-dev-server": "^3.1.10"
-	},
-	"scripts": {
-		"build:dev": "webpack --config webpack.config.js --watch",
-		"build:prod": "webpack --config webpack.config.js -p"
-	}
+  "name": "image-upload",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-fileupload": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "scripts": {
+    "build:dev": "webpack --config webpack.config.js --watch",
+    "build:prod": "webpack --config webpack.config.js -p"
+  }
 }
