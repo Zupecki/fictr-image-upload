@@ -12,11 +12,7 @@ body {
     font-weight: bold;
 }
 
-.off {
-    display: none;
-}
-
-.content {
+.view {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,13 +30,14 @@ body {
     display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 100%;
 }
 
-.upload-container {
+.state-container {
     border-color: #63D6D5;
     border-style: dashed;
     padding: 60px;
-    height: 200px;
+    /*height: 420px;*/
     width: 100%;
     text-align: center;
 }
@@ -71,13 +68,13 @@ body {
     float: right;
 }
 
-#waiting-state {
+.state-box {
     display: inline-block;
     text-align: center;
     margin: auto;
 }
 
-#upload-wrapper {
+.controls-container {
     flex: 0 0 100%;
     display: flex;
     justify-content: center;
@@ -102,4 +99,25 @@ body {
 
 #upload-progress {
     margin: 4px;
+}
+
+.upload-error {
+    color: red;
+}
+
+#image-preview {
+    display: block;
+    margin: 5px auto;
+    max-height: 200px;
+    border: 1px solid #000;
+}
+
+#image-description {
+    display: block;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.hidden {
+    display: none !important;
 }

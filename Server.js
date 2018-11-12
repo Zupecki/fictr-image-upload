@@ -15,12 +15,16 @@ app.use(fileUpload({
 app.use('/', express.static('dist'))
 app.post('/upload', (req, res) => {
     const file = req.files.file;
-    console.log(file);
+
+    console.log(`File: ${file}`);
+    console.log(`Description: ${req.body.description}`);
+
+    //only handling file based on scope, abandoning description
     file.mv(`./dist/uploaded_files/${file.name}`, function(err) {
         if (err)
           return res.status(500).send(err);
 
-        res.send('File uploaded!');
+        res.status(200).send('File uploaded!');
       });
 })
 
