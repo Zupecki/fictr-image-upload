@@ -8,6 +8,7 @@ All built in vanilla - scope of project didn't warrant framework
 
 <!-- Explain installation instructions here -->
 Requires node.js to be installed
+package.json lists dependencies and devDependencies
 
 ## Running
 
