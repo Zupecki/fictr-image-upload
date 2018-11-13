@@ -15,6 +15,7 @@ export default class uploadImageView {
         
         //element references
         this.view = document.querySelector('.view');
+        this.flexBox = document.querySelector('.flexBox');
         this.state = document.querySelector('.state-container');
         this.controls = document.querySelector('.controls-container');
 
@@ -60,7 +61,6 @@ export default class uploadImageView {
     }
 
     cancelFile() {
-        console.log('cancel file clicked');
         this.cancelFileEvent.notify();
     }
 
@@ -70,7 +70,6 @@ export default class uploadImageView {
 
     //update view
     render(event = null) {
-        console.log(`EVENT: ${event}`);
         //if model has no images, ergo zero state
         if(!this.model.loadedImage) {
             this.messageParts = ['don\'t hesitate', 'and pick a curated selfie'];
@@ -151,11 +150,13 @@ export default class uploadImageView {
 
     getControlsMarkup() {
         return `
-            <button id="upload-button">Upload</button>
-            <button id="cancel-button">Cancel</button>
-            <div id="progress-wrapper">
-                <p class="upload-error hidden"></p>
-                <progress class="" id="upload-progress" name="upload-progress" max="100" value=""></progress>
+            <div class="controls-container">
+                <button id="upload-button">Upload</button>
+                <button id="cancel-button">Cancel</button>
+                <div id="progress-wrapper">
+                    <p class="upload-error hidden"></p>
+                    <progress class="" id="upload-progress" name="upload-progress" max="100" value=""></progress>
+                </div>
             </div>
         `
     }
@@ -179,7 +180,6 @@ export default class uploadImageView {
     descriptionClip() {
         const description = this.imageDescriptionElement;
         const charLimit = 140;
-        console.log(description.value.length);
         if(description.value.length >= charLimit)
             description.value = description.value.substring(0, charLimit);
     }

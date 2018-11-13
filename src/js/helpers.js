@@ -36,7 +36,7 @@ export default class Event {
 
     notify (args) {
         for(var i = 0; i < this._listeners.length; i++) {
-            console.log(`${this.eventName} triggered ${args}`);
+            //console.log(`${this.eventName} triggered ${args}`);
             this._listeners[i](args);
         }
     }
