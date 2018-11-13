@@ -69,15 +69,18 @@ export default class uploadImageView {
     }
 
     //update view
-    render() {
+    render(event = null) {
+        console.log(`EVENT: ${event}`);
         //if model has no images, ergo zero state
         if(!this.model.loadedImage) {
-            this.zeroMessage = ['don\'t hesitate', 'and pick a curated selfie'];
+            this.messageParts = ['don\'t hesitate', 'and pick a curated selfie'];
 
             if(this.model.imagesUploaded > 0)
-                this.zeroMessage = ['upload complete', 'and pick another selfie'];
+                this.messageParts = ['upload complete', 'and pick another selfie'];
+            if(event == 'cancelled')
+                this.messageParts = ['upload cancelled', 'and pick a better selfie'];
 
-            this.state.innerHTML = this.getZeroMarkup(this.zeroMessage);
+            this.state.innerHTML = this.getZeroMarkup(this.messageParts);
             this.controls.innerHTML = "";
 
             //input and listener

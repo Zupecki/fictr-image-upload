@@ -16,6 +16,7 @@ export default class ImageUploaderModel {
 
     loadFile(file) {
         this.loadedImage = new Image(file);
+        this.imagesUploaded += 1;
         // for multiple image expansion
         /*
         this.uploadList.push(new Image(file));
@@ -30,6 +31,7 @@ export default class ImageUploaderModel {
 
     cancelFile() {
         this.reinit();
+        this.cancelFileEvent.notify('cancelled')
     }
 
     getUploadProgress() {
@@ -38,7 +40,6 @@ export default class ImageUploaderModel {
 
     setUploadProgress(e) {
         this.uploadProgress = e.loaded/e.total*100;
-        console.log(`MODEL UPLOAD PROGRESS: ${this.getUploadProgress()}`);
 
         //tell view to render for progress
         this.uploadProgressEvent.notify();
@@ -59,6 +60,7 @@ export default class ImageUploaderModel {
         () => {
             //reinit model when upload complete
             this.reinit();
+            this.uploadProgressEvent.notify();
         },
         () => {
             return
@@ -66,11 +68,8 @@ export default class ImageUploaderModel {
     }
 
     reinit() {
-        setTimeout(1000);
-        this.imagesUploaded += 1;
         this.uploadProgress = 0;
         delete this.loadedImage;
-        this.uploadProgressEvent.notify();
     }
 
 };
