@@ -7,7 +7,7 @@ All built in vanilla - scope of project didn't warrant framework
 ## Installation
 
 <!-- Explain installation instructions here -->
-Requires node.js to be installed
+Requires node.js and npm to be installed
 package.json lists dependencies and devDependencies
 
 ## Running
