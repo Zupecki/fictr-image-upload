@@ -30,6 +30,7 @@ export default class ImageUploaderModel {
     }
 
     cancelFile() {
+        // doesn't actually interrupt upload process: need to fix
         this.reinit();
         this.cancelFileEvent.notify('cancelled')
     }
